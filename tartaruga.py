@@ -1,8 +1,12 @@
 import turtle
 
-def ajuda(funcao):
-	'''Exibe a ajuda de uma função dada'''
-	help(funcao)
+def ajuda(funcao = ""):
+	'''Exibe a ajuda de uma função dada (ou caso nenhuma funcao seja passada,
+	   explica como usar o comando dir para listar as funções disponíveis).'''
+	if funcao != "":
+		help(funcao)
+	else:
+		print("Use 'dir()' para ver as funções disponíveis")
 	
 def abaixar_caneta():
 	'''Os próximos comandos de movimento da tartaruga deixarão rastro'''
@@ -51,6 +55,7 @@ def esquerda(angulo):
 	turtle.left(angulo)
 
 def exibir():
+	'''Exibe a tartaruga na tela'''
 	turtle.shape("turtle")
 	turtle.showturtle()
 
@@ -66,7 +71,7 @@ def mudar_direcao(angulo):
 	'''Muda a direção da tartaruga pelo ângulo dado'''
 	turtle.setheading(angulo)
 
-def parar_preenchimento():
+def finalizar_preenchimento():
 	'''Os desenhos seguintes deixam de ser preenchidos'''
 	turtle.end_fill()
 
@@ -101,7 +106,6 @@ def velocidade(valor):
 def voltar_casa():
 	'''Retorna a tartaruga para a posição original (coordenadas 0,0)'''
 	turtle.home()
-
 
 # Funções auxiliares
 

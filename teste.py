@@ -11,7 +11,6 @@ esquerda(90)
 pra_frente(100)
 terminar()
 '''
-
 exibir()
 velocidade(1)
 andar_ate(100, 120)
@@ -44,6 +43,6 @@ iniciar_preenchimento()
 for i in range(4):
     pra_frente(60)
     esquerda(90)
-parar_preenchimento()
+finalizar_preenchimento()
 terminar()
 #reiniciar()
